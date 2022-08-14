@@ -1,0 +1,51 @@
+cabal-version:      2.4
+name:               grpc-sample
+version:            0.1.0.0
+synopsis: A grpc-haskell server/client sample
+author:             ruicc
+maintainer:         ruicc.rail@gmail.com
+extra-source-files:
+    README.md
+
+executable server
+    main-is:          Main.hs
+    build-depends:    base ^>=4.16.1.0
+                    , grpc-haskell
+                    , grpc-haskell-core
+                    , proto3-suite
+                    , proto3-wire
+                    , bytestring
+                    , containers
+                    , text
+                    , vector
+                    , deepseq
+                    , time
+    hs-source-dirs:   server, gen
+    other-modules:    Proto.Greet
+    default-language: GHC2021
+    default-extensions:
+        PackageImports
+        DataKinds
+        OverloadedStrings
+        GADTs
+
+executable client
+    main-is:          Main.hs
+    build-depends:    base ^>=4.16.1.0
+                    , grpc-haskell
+                    , grpc-haskell-core
+                    , proto3-suite
+                    , proto3-wire
+                    , bytestring
+                    , containers
+                    , text
+                    , vector
+                    , deepseq
+    hs-source-dirs:   client, gen
+    other-modules:    Proto.Greet
+    default-language: GHC2021
+    default-extensions:
+        PackageImports
+        DataKinds
+        OverloadedStrings
+        GADTs

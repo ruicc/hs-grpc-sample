@@ -1,0 +1,22 @@
+packages:
+    .
+
+source-repository-package
+    type: git
+    location: https://github.com/herp-inc/proto3-suite.git
+    tag: d62715d5f79672184ead29f1bb3c14c10340a136
+
+source-repository-package
+    type: git
+    location: https://github.com/fumieval/proto3-wire.git
+    tag: 11a7a72cfc365d33add539a088e1b46d9979145a
+
+source-repository-package
+    type: git
+    location: https://github.com/awakesecurity/gRPC-haskell
+    tag: 112777023f475ddd752c954056e679fbca0baa44
+    subdir:
+        .
+        core
+
+allow-newer: *

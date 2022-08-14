@@ -1,1 +1,1 @@
-# hs-grpc-sample
+# grpc-sample
