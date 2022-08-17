@@ -20,3 +20,6 @@ source-repository-package
         core
 
 allow-newer: *
+
+with-compiler: ghc-9.2.3
+index-state: hackage.haskell.org 2022-08-09T03:22:13Z
