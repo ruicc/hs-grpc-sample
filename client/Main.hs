@@ -4,10 +4,6 @@
 module Main where
 
 import Proto.Greet (Greet(..), greetClient, HelloReq(..), HelloRes(..))
-import "grpc-haskell" Network.GRPC.HighLevel
-import "bytestring" Data.ByteString qualified as B
-import "text" Data.Text qualified as T
-import "grpc-haskell-core" Network.GRPC.LowLevel
 import "grpc-haskell" Network.GRPC.HighLevel.Generated
   ( GRPCMethodType(Normal)
   , defaultServiceOptions
@@ -16,6 +12,7 @@ import "grpc-haskell" Network.GRPC.HighLevel.Generated
   , StatusCode(..)
   , Host(..)
   , withGRPCClient
+  , ClientConfig(..)
   )
 
 main :: IO ()
